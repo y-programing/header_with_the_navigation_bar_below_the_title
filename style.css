@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background: #efefef;
+}
+
+header ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    border: 2px solid #000;
+    text-align: center;
+}
+
+header ul li {
+    flex-basis: 25%;
+    border-left: 2px solid #333;
+}
+
+header ul li:first-child {
+    border-left-color: transparent;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+h1 {
+    text-align: center;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
