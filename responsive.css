@@ -1,0 +1,59 @@
+@media screen and (max-width: 768px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    header ul {
+        display: none;
+        border: 0;
+    }
+
+    header ul li {
+        border: 0;
+    }
+
+    #hamburger {
+        margin-top: 13px;
+    }
+
+    span {
+        display: block;
+        width: 30px;
+        height: 3px;
+        margin-bottom: 5px;
+        background: #000;
+        transition: all 0.3s;
+    }
+
+
+    /* ここからハンバーガーメニュー */
+
+    .navigation.active {
+        margin-top: 48px;
+        position: absolute;
+        z-index: 3;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.5);
+    }
+
+    .navigation.active span:first-child {
+        transform: translateY(10px) rotate(45deg);
+    }
+
+    .navigation.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .navigation.active span:last-child {
+        transform: translateY(-10px) rotate(-45deg);
+    }
+    
+    .navigation.active ul {
+        display: block;
+    }
+
+    .navigation.active ul li {
+        margin: 10px 0;
+    }
+}
