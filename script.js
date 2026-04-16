@@ -3,7 +3,7 @@ const body = document.body;
 // ハンバーガーボタン
 const hamburger = document.querySelector("#hamburger");
 // メニュー
-const headerMenu = document.querySelector(".navigation");
+const headerMenu = document.querySelector(".c-drawer");
 
 // ハンバーガー（三本線のマーク）がクリックされたら
 hamburger.addEventListener("click", () => {
