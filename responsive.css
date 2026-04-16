@@ -14,7 +14,9 @@
     }
 
     #hamburger {
+        position: relative;
         margin: 13px;
+        z-index: 1000;
     }
 
     span {
@@ -29,31 +31,44 @@
 
     /* ここからハンバーガーメニュー */
 
-    .navigation.active {
-        margin-top: 48px;
-        position: absolute;
-        z-index: 3;
+    .c-drawer {
+        position: fixed; /* absoluteよりfixedの方が画面に固定されるのでおすすめ */
+        top: 50px;
+        height: calc(100vh - 50px);
+        right: -100%; /* 画面の右外に隠す */
+        width: 70%;  /* メニューの幅（お好みで） */
+        height: 100vh;
+        background: rgba(255, 255, 255, 0.95); /* 背景色 */
+        z-index: 100;
+        transition: all 0.5s; /* スライドの速度 */
+        padding-top: 60px; /* 上部に余白 */
+    }
+
+    .c-drawer.active {
+        right: -70%;
         width: 100%;
         background: rgba(255, 255, 255, 0.5);
     }
 
-    .navigation.active span:first-child {
+    .c-drawer.active span:first-child {
         transform: translateY(10px) rotate(45deg);
     }
 
-    .navigation.active span:nth-child(2) {
+    .c-drawer.active span:nth-child(2) {
         opacity: 0;
     }
 
-    .navigation.active span:last-child {
+    .c-drawer.active span:last-child {
         transform: translateY(-10px) rotate(-45deg);
     }
     
-    .navigation.active ul {
+    .c-drawer.active ul {
         display: block;
     }
 
-    .navigation.active ul li {
+    .c-drawer.active ul li {
         margin: 10px 0;
+        padding: 0 10px;
+        text-align: left;
     }
 }
