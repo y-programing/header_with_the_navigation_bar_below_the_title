@@ -32,16 +32,16 @@
     /* ここからハンバーガーメニュー */
 
     .c-drawer {
-        position: fixed; /* absoluteよりfixedの方が画面に固定されるのでおすすめ */
+        position: fixed;
         top: 50px;
         height: calc(100vh - 50px);
-        right: -100%; /* 画面の右外に隠す */
-        width: 70%;  /* メニューの幅（お好みで） */
+        right: -100%;
+        width: 70%;
         height: 100vh;
-        background: rgba(255, 255, 255, 0.95); /* 背景色 */
+        background: rgba(255, 255, 255, 0.95);
         z-index: 100;
-        transition: all 0.5s; /* スライドの速度 */
-        padding-top: 60px; /* 上部に余白 */
+        transition: all 0.5s;
+        padding-top: 60px;
     }
 
     .c-drawer.active {
@@ -50,16 +50,16 @@
         background: rgba(255, 255, 255, 0.5);
     }
 
-    .c-drawer.active span:first-child {
-        transform: translateY(10px) rotate(45deg);
+    #hamburger.open span:nth-of-type(1) {
+        transform: translateY(8px) rotate(45deg);
     }
 
-    .c-drawer.active span:nth-child(2) {
+    #hamburger.open span:nth-of-type(2)  {
         opacity: 0;
     }
 
-    .c-drawer.active span:last-child {
-        transform: translateY(-10px) rotate(-45deg);
+    #hamburger.open span:nth-of-type(3)  {
+        transform: translateY(-8px) rotate(-45deg);
     }
     
     .c-drawer.active ul {
